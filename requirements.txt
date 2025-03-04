@@ -1,0 +1,12 @@
+matplotlib
+nltk
+pandas
+pick
+seaborn
+argparse
+jupyter
+poetry
+pytest
+scikit-learn
+sqlalchemy
+streamlit
