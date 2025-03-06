@@ -8,6 +8,14 @@ def  is_missing_value(df):
     """
     return df.isnull().values.any()
 
+
+def count_missing_values_per_column(df):
+    """
+    Count missing values per column
+    """
+    return df.isnull().sum()
+
+
 def remove_missing_values(df):
     """
     Remove rows with missing values
@@ -25,11 +33,14 @@ def fill_missing_values_with_mean(df):
     Fill missing values with the mean of the column
     """
     return df.fillna(df.mean())
+
 def fill_missing_values_with_median(df):
     """
     Fill missing values with the median of the column
     """
     return df.fillna(df.median())
+
+
 
 def fill_missing_values_with_mode(df):
     """
@@ -37,13 +48,18 @@ def fill_missing_values_with_mode(df):
     """
     return df.fillna(df.mode().iloc[0])
 
+
 def fill_missing_values_with_interpolation(df):
     """
     Fill missing values with interpolation
     """
     return df.interpolate()
 
-
+def is_outlier(df, column, threshold=3):
+    """
+    Detect outliers in a column
+    """
+    
 
 def remove_outliers(df, column, threshold=3):
     """
