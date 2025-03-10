@@ -1,5 +1,6 @@
 import numpy as np
 from scipy import stats
+import matplotlib.pyplot as plt
 
 
 def  is_missing_value(df):
@@ -55,10 +56,13 @@ def fill_missing_values_with_interpolation(df):
     """
     return df.interpolate()
 
-def is_outlier(df, column, threshold=3):
+def check_outlier_box_plot(df, column, threshold=3):
     """
     Detect outliers in a column
     """
+    fig = plt.boxplot(df[column])
+    plt.show()
+
     
 
 def remove_outliers(df, column, threshold=3):
