@@ -56,14 +56,6 @@ def fill_missing_values_with_interpolation(df):
     """
     return df.interpolate()
 
-def check_outlier_box_plot(df, column, threshold=3):
-    """
-    Detect outliers in a column
-    """
-    fig = plt.boxplot(df[column])
-    plt.show()
-
-    
 
 def remove_outliers(df, column, threshold=3):
     """
@@ -72,3 +64,28 @@ def remove_outliers(df, column, threshold=3):
     z_scores = np.abs(stats.zscore(df[column]))
     return df[(z_scores < threshold)]
 
+
+def find_outliers_IQR(df, column):
+
+   q1=df[column].quantile(0.25)
+
+   q3=df[column].quantile(0.75)
+
+   IQR=q3-q1
+
+   outliers = df[((df[column]<(q1-1.5*IQR)) | (df[column]>(q3+1.5*IQR)))]
+
+   return outliers
+
+
+def find_outlier_box_plot(df, column, threshold=3):
+    """
+    Detect outliers in a column
+    """
+    plt.figure(figsize=(8, 6))
+    plt.boxplot(df[column], vert=True, patch_artist=True)
+    plt.title('Box Plot of Age')
+    plt.ylabel('Age (years)')
+    plt.xlabel('Age Distribution')
+    plt.show()
+ 
