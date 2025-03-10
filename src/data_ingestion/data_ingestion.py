@@ -1,6 +1,7 @@
 import subprocess
 import sys
 import os
+from pyspark.sql import SparkSession
 
 os.chdir('..')
 
@@ -32,3 +33,9 @@ if __name__ == '__main__':
     
     load_csv_to_hadoop(local_csv_file, hdfs_destination)
 
+
+
+def read_csv_data_from_hadoop(hadoop_data_directory):
+    spark = SparkSession.builder.appName("data_preprocessing").getOrCreate()
+    data = spark.read.csv(hadoop_data_directory, header=True, inferSchema=True)
+    return data
