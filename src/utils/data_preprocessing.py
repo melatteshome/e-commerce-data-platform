@@ -17,6 +17,34 @@ def count_missing_values_per_column(df):
     return df.isnull().sum()
 
 
+def find_missing_values(df):
+    """
+    Finds and prints a summary of missing values (NaN) and empty strings in each column,
+    and returns the rows that contain any such values.
+    """
+    # Create a mask for missing values (NaN)
+    missing_mask = df.isna()
+    
+    # Create a mask for empty strings. We use .applymap to check each element.
+    empty_string_mask = df.applymap(lambda x: isinstance(x, str) and x.strip() == '')
+    
+    # Combine the two masks: True if the value is either NaN or an empty string.
+    combined_mask = missing_mask | empty_string_mask
+    
+    # Print a summary for each column
+    for col in df.columns:
+        num_missing = missing_mask[col].sum()
+        num_empty = empty_string_mask[col].sum()
+        if num_missing > 0 or num_empty > 0:
+            print(f"Column '{col}': {num_missing} NA values, {num_empty} empty string values")
+    
+    # Get rows that have any missing/empty values
+    rows_with_issues = df[combined_mask.any(axis=1)]
+    
+    return rows_with_issues
+
+
+
 def remove_missing_values(df):
     """
     Remove rows with missing values
