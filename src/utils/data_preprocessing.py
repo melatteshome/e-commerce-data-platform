@@ -51,11 +51,13 @@ def remove_missing_values(df):
     """
     return df.dropna()
 
-def fill_missing_values(df, value):
+def fill_missing_values(df,column, value):
     """
     Fill missing values with a specific value
     """
-    return df.fillna(value)
+    df_copy = df.copy()  # Create a copy to avoid modifying the original DataFrame.
+    df_copy[column] = df_copy[column].fillna(value)
+    return df_copy
 
 def fill_missing_values_with_mean(df):
     """
