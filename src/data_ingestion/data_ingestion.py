@@ -39,3 +39,5 @@ def read_csv_data_from_hadoop(hadoop_data_directory):
     spark = SparkSession.builder.appName("data_preprocessing").getOrCreate()
     data = spark.read.csv(hadoop_data_directory, header=True, inferSchema=True)
     return data
+
+
