@@ -1,7 +1,7 @@
 import subprocess
 import sys
 import os
-from pyspark.sql import SparkSession
+
 
 os.chdir('..')
 
