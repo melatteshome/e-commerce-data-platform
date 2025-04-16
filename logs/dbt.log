@@ -1,0 +1,32 @@
+[0m16:34:30.126803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bb244d65a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bb263155e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bb247c3320>]}
+
+
+============================== 16:34:30.130791 | 57fe2a64-b658-467a-8d35-0eb2448600a7 ==============================
+[0m16:34:30.130791 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:34:30.131365 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/mullan/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init dbt-transformation', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:34:30.137295 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/home/mullan/.dbt')}
+[0m16:34:30.137583 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m16:35:05.752706 [debug] [MainThread]: Starter project path: /home/mullan/Documents/Projects DA/e-commerce-data-platform/myenv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m16:35:05.756319 [info ] [MainThread]: 
+Your new dbt project "dbt_transformation" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:35:05.757060 [info ] [MainThread]: Setting up your profile.
+[0m16:38:56.972820 [info ] [MainThread]: Profile dbt_transformation written to /home/mullan/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:38:56.983396 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 266.88705, "process_in_blocks": "728", "process_kernel_time": 0.079991, "process_mem_max_rss": "100332", "process_out_blocks": "88", "process_user_time": 0.794912}
+[0m16:38:56.983750 [debug] [MainThread]: Command `dbt init` succeeded at 16:38:56.983675 after 266.89 seconds
+[0m16:38:56.984008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bb2416ac30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bb25dae8a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bb240c24e0>]}
+[0m16:38:56.984299 [debug] [MainThread]: Flushing usage events
+[0m16:38:58.576098 [debug] [MainThread]: An error was encountered while trying to flush usage events
