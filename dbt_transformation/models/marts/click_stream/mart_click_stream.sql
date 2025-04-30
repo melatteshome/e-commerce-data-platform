@@ -1,4 +1,5 @@
 -- models/marts/mart_click_stream.sql
+{{ config(materialized='table') }}
 
 with events as (
 
@@ -13,10 +14,7 @@ aggregated as (
         min(event_timestamp) as session_start_time,
         max(event_timestamp) as session_end_time,
         count(*) as total_events,
-        count(distinct event_name) as unique_event_types,
-        any_value(device_type) as device_type,
-        any_value(browser_type) as browser_type,
-        any_value(traffic_source) as traffic_source
+        count(distinct event_name) as unique_event_types
     from events
     group by session_id
 
