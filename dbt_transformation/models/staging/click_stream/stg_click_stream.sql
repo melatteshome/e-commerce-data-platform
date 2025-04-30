@@ -9,7 +9,7 @@ with source as (
         event_id,
         traffic_source,
         event_metadata
-    from {{ source('raw_data', 'click_stream') }}
+    from {{ source('e-commerce', 'click_stream') }}
 
 ),
 
