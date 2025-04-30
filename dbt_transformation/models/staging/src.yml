@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: e-commerce
+    schema: public
+    tables: 
+      - name: customer
+      - name: transactions
+      - name: click_stream
+      - name: product
