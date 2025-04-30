@@ -28,4 +28,4 @@ renamed as (
     from source
 )
 
-SELECT * from rename
+SELECT * from renameds
