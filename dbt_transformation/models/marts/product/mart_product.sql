@@ -1,9 +1,10 @@
 -- models/marts/mart_products.sql
+{{ config(materialized='table') }}
 
 with final as (
 
     select * 
-    from {{ ref('int_products') }}
+    from {{ ref('int_product') }}
 
 )
 
@@ -13,7 +14,8 @@ select
     gender,
     base_colour,
     season,
-    product_age_category,
     product_full_category
 from final
-where base_colour ,product_id , gender is not NULL
+WHERE base_colour IS NOT NULL
+  AND product_id IS NOT NULL
+  AND gender IS NOT NULL
