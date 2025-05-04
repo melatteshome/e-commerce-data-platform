@@ -2,3 +2,5 @@
 .env
 /data/raw/*
 logs/*
+/airflow/logs/*
+/dbt_transformation/logs/*
