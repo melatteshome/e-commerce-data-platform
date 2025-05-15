@@ -28,7 +28,7 @@ renamed AS (
         home_country,
         CAST(first_join_date AS DATE) AS first_join_date
     FROM source
-    WHERE email IS NOT NULL AND username IS NOT NULL
+    WHERE email IS NOT NULL AND customer_id IS NOT NULL
 )
 
 SELECT * FROM renamed
