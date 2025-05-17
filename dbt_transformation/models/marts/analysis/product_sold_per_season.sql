@@ -62,6 +62,6 @@ SELECT
   product_display_name,
   total_units_sold
 FROM ranked_sales
-WHERE season IS NOT NULL
+WHERE  row_num = 1 AND season IS NOT NULL
 ORDER BY season
 

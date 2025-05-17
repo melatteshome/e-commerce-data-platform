@@ -22,10 +22,10 @@ renamed as (
         lower(trim(articleType)) as article_type,
         lower(trim(baseColour)) as base_colour,
         lower(trim(season)) as season,
-        cast(concat(year, '-01-01') as date) as year,
+        SPLIT_PART(year, '.', 1) AS year_time,
         lower(trim(usage)) as usage_type,
         productDisplayName as product_display_name
     from source
 )
 
-SELECT * from renameds
+SELECT * from renamed
