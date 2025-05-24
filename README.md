@@ -25,5 +25,9 @@ This project intends to solve customer experience issues and optimize marketing 
   ```
   python3 -m venv myenv
   ```
+## Getting Started
+To get started with the project, expolore the repository and get familiar with it. i will be linking the blog post i wrote from the project below so you can get a much understanding of the project.
 
+## Data Source 
+For the project i have used an open source dataset, you can get the dataset from [https://www.kaggle.com/datasets/bytadit/transactional-ecommerce]Here
   
