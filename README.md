@@ -30,6 +30,6 @@ To get started with the project, explore the repository and get familiar with it
 
 ## Data Source 
 For the project i have used an open source dataset, you can get the dataset from the link below [https://www.kaggle.com/datasets/bytadit/transactional-ecommerce]
-## Blog
-i have written an article on medium, you can also check it out to get a better understanding of the project. I will leave the link below. [https://medium.com/@mtadesse813/data-warehousing-and-elt-pipeline-d31be0ad51f2]
+### Blog
+I have written an article on medium, you can also check it out to get a better understanding of the project. I will leave the link below. [https://medium.com/@mtadesse813/data-warehousing-and-elt-pipeline-d31be0ad51f2]
 
